@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import {
   Search,
   ShoppingBag,
@@ -49,8 +49,15 @@ const FEATURES = [
   { icon: ShieldCheck, title: "Secure Payment", subtitle: "100% protected" },
   { icon: Headphones, title: "24/7 Support", subtitle: "We're here to help" },
 ];
+
+const NOTES = [
+  { stage: "Top", name: "Bergamot & Citrus", desc: "A bright, sparkling opening of fresh bergamot and lemon zest." },
+  { stage: "Heart", name: "Rose & Jasmine", desc: "Elegant floral heart with soft rose petals and jasmine." },
+  { stage: "Base", name: "Sandalwood & Musk", desc: "Warm, lingering base of creamy sandalwood and soft musk." },
+];
+
 export default function ModezaLanding() {
-  const [catIndex, setCatIndex] = useState(0);
+  const [, setCatIndex] = useState(0);
 
   return (
     <div className="min-h-screen bg-[#FBF8F3] text-[#2B2622] font-sans">
@@ -310,7 +317,7 @@ export default function ModezaLanding() {
   );
 }
 
-function Stat({ icon, value, label }) {
+function Stat({ icon, value, label }: { icon: ReactNode; value: string; label: string }) {
   return (
     <div className="flex items-center gap-2">
       <span className="text-[#2B2622]/70">{icon}</span>
