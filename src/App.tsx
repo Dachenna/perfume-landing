@@ -1,4 +1,4 @@
-import Hero from '../src/components/Hero.tsx'
+import Hero from './components/Hero.tsx'
 
 const App = () => {
   return (
