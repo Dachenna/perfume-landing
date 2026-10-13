@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero from '../src/components/Hero.tsx'
 
 const App = () => {
